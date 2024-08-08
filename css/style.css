@@ -4,17 +4,63 @@
 /*Variaveis cores*/
 :root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0;
-    --primary-bg-color: #511f56;
-
-
+    --primary-bg-color: #3b0069;
+    --secondary-bg-color: #28292E;
+    --primary-border-color: #28292E;
+    --secondary--border-color: #f0f0f0;
+    --title-color: #f0f0f0;
+    --link-color: #9b9b9b;
+    --link-hover: #ffffff;
+    --icon-color: #C7C8C9;
 }
 :root[data-theme='light'] {
     --primary-color: #171511;
-    --primary-bg-color: #f5e6e8;
-
+    --primary-bg-color: #be9ecf;
+    --secondary-bg-color: #c7c8c9;
+    --primary-border-color:#c7c8c9;
+    --secondary--border-color: #9a9a9c;
+    --title-color: #0B0B0F;
+	--link-hover: #a3a2a2;
+	--link-color: #0B0B0F;
+	--icon-color: #56575A;
 }
+
+* {
+    margin: 0; 
+    padding: 0px; 
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
+}
+
 
 body{
     background: var(--primary-bg-color);
     color: var(--primary-color)
+    
+}
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2;
+}
+
+.header-logo .logo{
+    width: 3.25rem;
+    height: 3.25rem;
 }
