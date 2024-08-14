@@ -6,10 +6,10 @@
     --primary-color: #f0f0f0;
     --primary-bg-color: #3b0069;
     --secondary-bg-color: #28292E;
-    --primary-border-color: #28292E;
+    --primary-border-color: #410074;
     --secondary--border-color: #f0f0f0;
     --title-color: #f0f0f0;
-    --link-color: #9b9b9b;
+    --link-color: #868686;
     --link-hover: #ffffff;
     --icon-color: #C7C8C9;
 }
@@ -84,3 +84,34 @@ a:hover {
     align-items: center;
     gap: .5rem;
 }
+
+.menu-mobile {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 2px solid var(--primary-border-color);
+}
+
+.menu-mobile .menu-link{
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem   ;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: var(--link-hover);
+}
+
+.menu-icon, .menu-text {
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
+
