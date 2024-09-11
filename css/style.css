@@ -81,6 +81,22 @@ i {
     height: 3.25rem;
 }
 
+.header-logo .logo2 {
+    width: 15rem;
+    height: 2rem;
+    margin-left: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+html[data-theme='light'] .logo {
+    filter: invert(1);
+} 
+
+html[data-theme='light'] .logo2 {
+    filter: invert(1);
+} 
+
 #toggleTheme {
     font-size: 1.5rem; 
     color: var(--icon-color);
@@ -146,55 +162,53 @@ i {
 }
 
 .menu-social {
-    gap: 1rem; 
- }
- 
- .btn {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 0.62rem;
-     width: 100%;
-     background: transparent;
-     border-radius: 3rem;
-     color: var(--primary-color);
-     border: none;
-     cursor: pointer;
-     padding: 0.5rem 1.5rem;
-     transition: ease-in-out .3s;
- }
- 
- .btn-primary {
-     border: 1px solid var(--secondary-border-color);
- }
- 
- .btn:hover {
-     transform: scale(1.07);
-     transition: ease-in-out 0.5s;
- }
- 
- .btn span,
- .btn i {
-     font-size: 1.25rem;
-     text-transform: uppercase;
- }
+   gap: 1rem; 
+}
 
- .btn-primary span {
-     color: var(--primary-color);
- }
- #home {
-     display: flex;
-     flex-direction: column;
-     gap: 2rem;
- }
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.62rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    transition: ease-in-out .3s;
+}
 
- .main-content {
-     display: flex;
-     flex-direction: column;
-     gap: 1.5rem;
- }
+.btn-primary {
+    border: 1px solid var(--secondary-border-color);
+}
 
- .video iframe{
+.btn:hover {
+    transform: scale(1.07);
+    transition: ease-in-out 0.5s;
+}
+
+.btn span,
+.btn i {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+.btn-primary span {
+    color: var(--primary-color);
+}
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.video iframe{
     width: 100%;
     aspect-ratio: 16/9;
 }
@@ -208,11 +222,16 @@ i {
     flex-direction: column;
     gap: 2rem;
 }
-
 .projetos-container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .card-cover {
@@ -239,8 +258,10 @@ i {
 
 .card-description {
     color: var(--primary-color);
+    /* font-size: ; */
     text-align: justify;
 }
+
 .card-lista {
     margin-left: 2rem;
 }
@@ -256,15 +277,15 @@ i {
     justify-content: center;
 }
 
-.card-button .ptn {
-    padding: 0.65rem 1.25rem;
+.card-button .btn {
+    padding: .65rem 1.25rem;
 }
 
 .card-button .btn span {
     font-size: 1rem;
 }
 
- 
+
 
 
 /* =====  --------------------- ======= */
@@ -283,16 +304,16 @@ i {
         display: flex;
     }
     .header-nav, 
-    .header-toggle{
-    min-width: 30%;
+    .header-toggle {
+        min-width: 30%;
     }
     h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
     h2 {
         font-size: 3rem;
     }
-    #home, .projetos , .sobre, .contato {
+    #home, .projetos, .sobre, .contato {
         padding: 8rem 6rem 4rem 6rem;
     }
     .main-content {
@@ -309,39 +330,22 @@ i {
     footer {
         margin: 0;
     }
-}
-/*  */
+}  
+/* -------- fim resolução 768 */
+
 
 @media (min-width: 992px) {
     .projeto-card {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-       }
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
     .card-reverse {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
     .card-cover {
-        width: 100%;
-        border-radius: 2rem;
-        
+        width: 55%;
     }
-    .sobre {
-        gap: 5rem;
-    }
-    .sobre-content1, .sobre-content2 {
-        display: grid;
-        grid-template-columns: 34% 60%;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 4rem;
-    }
-    .sobre-descricao h2 {
-        text-align: left;
-    }
-    .descricao-button {
-        justify-content: flex-start;
-    }
-}
+    
 
+}
