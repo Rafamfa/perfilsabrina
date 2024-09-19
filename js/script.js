@@ -2,6 +2,10 @@ const toggleTheme = document.getElementById("toggleTheme");
 
 const rootHtml = document.documentElement;
 
+const accordionHeaders = document.querySelectorAll("accordion-header");
+
+
+
 
 //função para alternar o tema 
 function changeTheme () {
