@@ -74,6 +74,7 @@ i {
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2;/*sobreposição*/
+    background: var(--primary-bg-color);
 }
    
 .header-logo .logo{
@@ -387,7 +388,18 @@ html[data-theme='light'] .logo2 {
 }
 
 /* Rotacionar Icone */
+.accordion-item.active .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
 
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+}
 /* =====  --------------------- ======= */
 
 /* CSS Responsivo */
